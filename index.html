@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="ikona-ostrowski.ico">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <table width=95% border="1" align="center">
+        <tr>
+            <td colspan="3">
+                <div id="glowa" align="center">
+                    <img src="logo-ostrowski.png" border=1 width="180" height="80"> <br>
+                    OSTROWSKI <br> Gdańsk 18.01.2024
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td width=18% align="center">
+                <b> lewe menu </b> <br> <br>
+                <a href="http://www.kuratorium.gda.pl" target="strony">Kuratorium</a>
+                <br>
+                <a href="https://zse.edu.gdansk.pl/pl" target="strony">ZSE Gdańsk</a>
+            </td>
+            <td align=center>
+                <iframe width=650 height=650 name="strony" src="start.html" border="0"></iframe>
+            </td>
+
+            <td>
+                <b> prawe menu </b><br>
+                <map name="ostrowski">
+                    <area shape="circle" coords="49,36,24" href="#" onclick="pobierzPlik('plik-ostrowski.png')" target="obszar_glowny">
+                    <area shape="rect" coords="16,71,84,110" href="tabela-ostrowski.html" target="obszar_glowny">
+                    <area shape="circle" coords="50,142,26" href="formularz-ostrowski.html" target="obszar_glowny">
+                    <area shape="rect" coords="15,172,85,214" href="mailto:klausadlergi@gmail.com">
+                    <area shape="circle" coords="51,250,25" href="https://dawidostrowskizse.github.io/zadanie-1-6/" target="obszar_glowny">
+                </map>
+                <img src="mapa-ostrowski.gif" alt="tutaj wybieraj linki" usemap="#ostrowski">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <b> STOPKA </b>- OSTROWSKI <br> Gdańsk 18.01.2024
+            </td>
+        </tr>
+    </table>
+
+    <!-- SKRYPT DO POBRANIA PLIKU -->
+    <script>
+        function pobierzPlik(sciezka) {
+            var link = document.createElement("a");
+            link.href = sciezka;
+            link.download = sciezka.substring(sciezka.lastIndexOf("/") + 1);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+
+</html>

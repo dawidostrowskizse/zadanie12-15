@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+	<html lang="pl">
+	<head>
+    	<meta charset="UTF-8">
+    		<title> formular ostrowski </title>
+	</head>
+
+    <style>
+        body {
+            background-color: #BA68C8;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input, select, button {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="range"] {
+            width: calc(100% - 18px);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<form id="psychiatristForm">
+    <h3> Formularz do psychiatry </h3>
+
+    <label for="firstName">Imię:</label>
+    <input type="text" id="firstName" name="firstName" required placeholder="Podaj swoje imię">
+
+    <label for="lastName">Nazwisko:</label>
+    <input type="text" id="lastName" name="lastName" required placeholder="Podaj swoje nazwisko">
+
+    <label for="gender">Płeć biologiczna:</label>
+    <select id="gender" name="gender">
+        <option value="male">Mężczyzna</option>
+        <option value="female">Kobieta</option>
+        <option value="other">Inna</option>
+    </select>
+
+    <label for="birthdate">Data urodzenia:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+
+    <label for="currentDate">Obecna data:</label>
+    <input type="date" id="currentDate" name="currentDate" required>
+
+    <label for="currentTime">Obecna godzina:</label>
+    <input type="time" id="currentTime" name="currentTime" required>
+
+    <label for="mood">Jak się czujesz?</label>
+    <input type="range" id="mood" name="mood" min="0" max="100" step="1" value="50">
+
+    <label for="hasPet">Masz zwierzę:</label>
+    <input type="checkbox" id="hasPet" name="hasPet">
+
+    <label for="suicideAttempts">Miałeś próby samobójcze:</label>
+    <input type="checkbox" id="suicideAttempts" name="suicideAttempts">
+
+    <label for="favoriteColor">Ulubiony kolor:</label>
+    <input type="color" id="favoriteColor" name="favoriteColor">
+
+    <button type="reset">Resetuj formularz</button>
+    <button type="submit">Zgłoś się</button>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
+        <button type="button" style="background-color: #FFA500;">Niespodzianka</button>
+    </a>
+</form>
+
+	</body>
+	</html>
+
+<!-- Wykonał Dawid Krzysztof Ostrowski 2K -->
